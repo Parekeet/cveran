@@ -2,7 +2,8 @@ var express = require('express'),
     router  = new express.Router();
 
 // Require controllers.
-var usersCtrl = require('../controllers/users');
+var usersCtrl      = require('../controllers/users');
+var menuController = require('../controllers/menu');
 
 // Require token authentication.
 var token = require('../config/token_auth');
@@ -14,5 +15,7 @@ router.put( '/users/me', token.authenticate, usersCtrl.update);
 
 router.post('/token', token.create);
 router.post('/users/me/token', token.authenticate, token.refresh);
+
+router.get('/menu', menuController.index);
 
 module.exports = router;

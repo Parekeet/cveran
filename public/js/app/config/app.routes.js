@@ -9,10 +9,10 @@
 
   function appRoutes($urlRouterProvider, $stateProvider) {
     $stateProvider
-      .state("welcome", {
-        url:         "/",
-        templateUrl: "/js/app/layouts/welcome.html"
-      })
+      // .state("welcome", {
+      //   url:         "/",
+      //   templateUrl: "/js/app/layouts/welcome.html"
+      // })
       .state("signin", {
         url:          "/signin",
         templateUrl:  "/js/app/auth/signin.html",
@@ -25,6 +25,24 @@
         controller:   "ProfileController",
         controllerAs: "vm",
         authorized:   true
+      })
+      .state("home", {
+        url: "/home",
+        templateUrl: "js/app/layouts/home.html"
+      })
+      .state("about", {
+        url: "/about",
+        templateUrl: "js/app/layouts/about.html"
+      })
+      .state("menu", {
+        url: "/menu",
+        templateUrl: "js/app/menu/menu.html",
+        controller: "MenuController",
+        controllerAs: "vm"
+      })
+      .state("contact", {
+        url: "/contact",
+        templateUrl: "js/app/layouts/contact.html"
       });
 
     $urlRouterProvider.otherwise("/");

@@ -23,6 +23,8 @@ body {
   padding-top: 70px;
 }
 
+
+
 a {
   cursor: pointer;
 }
@@ -72,4 +74,80 @@ form {
 
 #exampleInputEmail1.red-border {
   border: 2px solid red;
+}
+
+#mint {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.parallax-container {
+  height: 250px;
+}
+
+#home-background {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+  background-image: url(&quot;http://nicstauber.com/video/fluries.jpeg&quot;);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+
+/*CONTACT*/
+
+#map-info {
+  float: left;
+}
+
+#contact-info {
+  float: right;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.contact-icon {
+  padding: 0px 5px;
+}
+
+.hours {
+  margin-top: 0px;
+}
+
+.days {
+  margin-bottom: 0px;
+}
+
+#address {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#contact {
+  text-align: center;
+  margin-top: 150px;
+  margin: 100px 250px;
+}
+
+#map {
+  max-height: 600px;
+  max-width: 600px;
+  position: relative;
+}
+
+/*MENU*/
+
+.item-name {
+  font-size: 16px;
+}
+
+.menu-items {
+  text-align: center;
 }
