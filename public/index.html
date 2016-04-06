@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <title>Auth App</title>
+  <title>Mint3</title>
   <meta charset="utf-8">
 
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
   <!-- If you must use outside libs that aren't Angular-specific, include them BEFORE Angular. -->
   <script src="/js/vendor/jwt-decode.2.0.1.js"></script>
 
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
 <body>
@@ -20,7 +23,7 @@
     <header ng-controller="NavbarController as vm">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-          <a ui-sref="welcome" class="navbar-brand"><img src="/images/token-symbol.png" width="40" height="40"></a>
+          <a ui-sref="home" class="navbar-brand"><img src="css/assets/mintt.png" width="40" height="40"></a>
           <div class="pull-right">
             <button ui-sref="home">Home</button>
             <button ui-sref="menu">Menu</button>
@@ -60,5 +63,6 @@
   <script src="/js/app/menu/menu.controller.js"></script>
   <script src="/js/app/users/user.service.js"></script>
   <script src="/js/app/users/profile.controller.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

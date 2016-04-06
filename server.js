@@ -50,7 +50,7 @@ app.use(debugReq);
 app.use(validateContentType);
 
 // Our routes.
-app.use('/api', routes);
+app.use('/', routes);
 
 // Catches all 404 routes.
 app.use(function(req, res, next) {

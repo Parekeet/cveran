@@ -221,6 +221,7 @@ Item.remove({}, function(err) {
     } else {
       console.log("Database seeded with " + items.length  + " items.");
       mongoose.disconnect();
+          process.exit(0);
     }
   });
 });

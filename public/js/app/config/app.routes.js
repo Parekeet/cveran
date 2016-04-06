@@ -9,10 +9,6 @@
 
   function appRoutes($urlRouterProvider, $stateProvider) {
     $stateProvider
-      // .state("welcome", {
-      //   url:         "/",
-      //   templateUrl: "/js/app/layouts/welcome.html"
-      // })
       .state("signin", {
         url:          "/signin",
         templateUrl:  "/js/app/auth/signin.html",

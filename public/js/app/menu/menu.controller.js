@@ -11,6 +11,7 @@
     var vm = this;
 
     vm.all = [];
+    vm.getMenu = getMenu;
 
     getMenu();
 

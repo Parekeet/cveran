@@ -1,5 +1,13 @@
-* {
+/** {
   box-sizing: border-box;
+}
+*/
+
+*,
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 [ng\:cloak],
@@ -74,6 +82,11 @@ form {
 
 #exampleInputEmail1.red-border {
   border: 2px solid red;
+}
+
+#home {
+  text-align: center;
+  margin-top: 250px;
 }
 
 #mint {
