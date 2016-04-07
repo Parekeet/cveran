@@ -14,8 +14,8 @@
       <option value="" disabled selected>{{vm.category}}</option>
       <option value="{{item.name}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
       {{item.name}}
-      <div>
-
+      <div class="right">
+      ${{item.cost}}
       </div>
       </option>
     </select>
