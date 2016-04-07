@@ -17,6 +17,7 @@ nav ul a {
     display: inline-block;
     padding: 0 15px;
     cursor: pointer;
+    height: 53px;
 }
 
 [ng\:cloak],
@@ -63,11 +64,11 @@ footer {
   z-index: -1; /* when using the dev console the footer can overlap content */
 }
 
-.container-fluid {
+/*.container-fluid {
   margin-right: auto;
   margin-left: auto;
   max-width: 950px;
-}
+}*/
 
 header,
 main,
@@ -173,3 +174,10 @@ form {
 .menu-items {
   text-align: center;
 }
+
+/*NAVAR*/
+
+.navbar {
+  height: 54px;
+}
+

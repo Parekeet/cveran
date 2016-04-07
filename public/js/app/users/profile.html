@@ -15,7 +15,7 @@
   <div class="input-field col s12 m6">
     <select name="order" id="order" ng-model="vm.item" class="icons" style="display: block">
       <option value="" disabled selected>{{vm.category}}</option>
-      <option value="{{item.name}}  ${{item.cost}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
+      <option value="{{item._id}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
       {{item.name}}
       <div class="pull-right">
       ${{item.cost}}
@@ -25,10 +25,11 @@
   </div><br><br>
   <button ng-click="vm.submit(vm.item)" class="btn waves-effect waves-light" type="submit" name="action">Add</button>
   <div >
-    <p>Orders:</p>
-    <div ng-repeat="item in vm.orders">{{item}}</div>
-    <p>Subtotal:{{vm.total}}</p>
+    <p>Order:</p>
+    <div ng-repeat="item in vm.order">{{item.name}}<i class="fa fa-times" ng-click="vm.remove(vm.item)"></i></div>
+    <p>Subtotal:{{vm.total | currency}}</p>
   </div>
+  <button ng-click="vm.placeOrder()" ng-disabled="!vm.order.length" class="btn waves-effect waves-light">Place Order</button>
 </div>
 
 

@@ -9,8 +9,8 @@
             <li ng-repeat="items in vm.all | filter:'Appetizers' ">
               {{items.name}}<br>
               {{items.description}}<br>
-              {{items.amount}}<br>
-              ${{items.cost}}<br><br>
+              <span ng-if="items.amount">{{items.amount}}<br></span>
+              {{items.cost | currency}}<br><br>
             </li>
       </ul>
     </div>
@@ -21,7 +21,7 @@
             {{items.name}}<br>
             {{items.description}}<br>
             {{items.amount}}<br>
-            {{items.cost}}<br><br>
+            {{items.cost | currency}}<br><br>
           </li>
       </ul>
     </div>
@@ -32,7 +32,7 @@
             {{items.name}}<br>
             {{items.description}}<br>
             {{items.amount}}<br>
-            {{items.cost}}<br><br>
+            {{items.cost | currency}}<br><br>
           </li>
       </ul>
     </div>
@@ -43,11 +43,12 @@
             {{items.name}}<br>
             {{items.description}}<br>
             {{items.amount}}<br>
-            {{items.cost}}<br><br>
+            {{items.cost | currency}}<br><br>
           </li>
       </ul>
     </div>
   </section>
 </div>
+
 
 

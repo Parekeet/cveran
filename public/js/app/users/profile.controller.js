@@ -5,18 +5,32 @@
     .module("app")
     .controller("ProfileController", ProfileController);
 
-  ProfileController.$inject = ["$http", "$scope", "$log"];
+  ProfileController.$inject = ["$http", "$scope", "$log", "$state"];
 
-  function ProfileController($http, $scope, $log) {
+  function ProfileController($http, $scope, $log, $state) {
     var vm = this;
 
     vm.all    = [];
     vm.category;
     vm.submit = submit;
-    vm.orders  = [];
-    vm.total   = [];
+    vm.remove = remove;
+    vm.order  = [];
+    vm.total   = 0;
 
     selectFood();
+
+    vm.placeOrder = function() {
+      $http.post('/api/orders', {
+        items: vm.order,
+        total: vm.total,
+        phoneNumber: vm.order.phoneNumber || 'n/a'
+      })
+      .then(function(order) {
+        // possibly show new order message
+
+        $state.go('pending');
+      });
+    };
 
     function selectFood() {
       $http
@@ -35,16 +49,20 @@
         });
     }
 
-    function submit(item) {
+    function submit(itemId) {
       //push stuff to an array
-      if (item) {
-        console.log(item);
-        vm.orders.push(item);
-        vm.total.push(item.cost);
+      if (itemId) {
+        var item = _.find(vm.all, {_id: itemId});
+        vm.order.push(item);
+        vm.total += item.cost;
         // getTotal();
       }
     }
 
+    function remove() {
+      console.log("I'm working");
+
+    };
 
 
     function getTotal(){

@@ -22,6 +22,13 @@
         controllerAs: "vm",
         authorized:   true
       })
+      .state("pending", {
+        url:          "/pending",
+        templateUrl:  "/js/app/orders/pending.html",
+        controller:   "PendingController",
+        controllerAs: "vm",
+        authorized:   true
+      })
       .state("home", {
         url: "/home",
         templateUrl: "js/app/layouts/home.html"
@@ -41,7 +48,7 @@
         templateUrl: "js/app/layouts/contact.html"
       });
 
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/home");
   }
 
   angular

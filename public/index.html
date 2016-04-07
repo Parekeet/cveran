@@ -6,10 +6,12 @@
 
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
   <script src="/js/vendor/jwt-decode.2.0.1.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.8.2/lodash.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
@@ -20,21 +22,30 @@
 <body>
   <div class="container-fluid">
 
+<!-- THIS IS THE NAV BAR -->
+
   <header ng-controller="NavbarController as vm">
-    <nav class="navbar navbar-default navbar-fixed-top white">
-      <div class="container">
-        <a ui-sref="home" class="navbar-brand"><img src="css/assets/mintt.png" width="40" height="40"></a>
-        <ul class="pull-right">
-          <li class="black-text"><a ui-sref="home">Home</a></li>
-          <li><a ui-sref="menu">Menu</a></li>
+    <div class="container">
+      <ul id="dropdown1" class="dropdown-content">
+      <li><a ui-sref="menu" class="black-text">Appetizer</a></li>
+      <li><a ui-sref="menu" class="black-text">Salad</a></li>
+      <li><a ui-sref="menu" class="black-text">Soup</a></li>
+      <li><a ui-sref="menu" class="black-text">Entree</a></li>
+      <li><a ui-sref="menu" class="black-text">Stuff</a></li>
+      </ul>
+      <nav class="navbar navbar-default navbar-fixed-top white">
+        <a ui-sref="home" class="navbar-brand" style="padding-left: 20px; padding-top: 7px"><img src="css/assets/mintt.png" width="40" height="40"></a>
+        <ul class="pull-right valign-wrapper">
+          <li><a ui-sref="home">Home</a></li>
+          <li><a href="#menu" class="dropdown-button" data-activates="dropdown1">Menu</a></li>
           <li><a ui-sref="about">About</a></li>
           <li><a ui-sref="contact">Contact</a></li>
           <li><a ng-show="vm.authService.isLoggedIn();" ui-sref="profile"></i>Order</a></li>
           <li><a ng-hide="vm.authService.isLoggedIn();" ui-sref="signin">Sign in</a></li>
           <li><a ng-click="vm.logOut();" ng-show="vm.authService.isLoggedIn()" >Sign out</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
     <main class="content" ui-view>
@@ -63,6 +74,7 @@
   <script src="/js/app/menu/menu.controller.js"></script>
   <script src="/js/app/users/user.service.js"></script>
   <script src="/js/app/users/profile.controller.js"></script>
+  <script src="/js/app/orders/pending.controller.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>

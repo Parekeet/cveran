@@ -1,0 +1,11 @@
+<h1>Your Orders</h1>
+
+<div ng-repeat="order in vm.orders | orderBy:'date':true track by $index">
+  <p>{{order.date}}</p>
+  <p>{{order.total}}</p>
+  <ul>
+    <li ng-repeat="item in order.items">
+      {{item.name}}
+    </li>
+  </ul>
+</div>
