@@ -4,6 +4,7 @@ var express = require('express'),
 // Require controllers.
 var usersCtrl      = require('../controllers/users');
 var menuController = require('../controllers/menu');
+var profileController = require('../controllers/profile');
 
 // Require token authentication.
 var token = require('../config/token_auth');
@@ -17,5 +18,6 @@ router.post('/token', token.create);
 router.post('/users/me/token', token.authenticate, token.refresh);
 
 router.get('/menu', menuController.index);
+router.get('/profile', profileController.index);
 
 module.exports = router;

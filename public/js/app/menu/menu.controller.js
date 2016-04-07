@@ -17,7 +17,7 @@
 
     function getMenu() {
       $http
-        .get('/menu')
+        .get('/api/menu')
         .then(function(data) {
           vm.all = data.data;
           console.log(data);

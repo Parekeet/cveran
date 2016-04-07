@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 var localEnvVars = {
-  TITLE:          'Auth App',
+  TITLE:          'Mint',
   SAFE_TITLE:     'mint3',
   COOKIE_SECRET:  'notsosecretnowareyou',
   SESSION_SECRET: 'anotherfoolishsecret',

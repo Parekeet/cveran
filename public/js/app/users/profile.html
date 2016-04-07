@@ -1,52 +1,31 @@
+<div id="order-form">
+  <div style="display: block" class="input-field col s12 m6">
+    <form id="category-selection" action="#">
+      <div class="radio-container" ng-repeat="category in vm.categories track by $index">
+        <p>
+          <input style="display: block" name="category" id="{{category}}-radio" type="radio" ng-model="vm.category" value="{{category}}">
+          <label for="{{category}}-radio">{{category}}</label>
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="input-field col s12 m6">
+    <select name="order" id="order" ng-model="vm.item" class="icons" style="display: block">
+      <option value="" disabled selected>{{vm.category}}</option>
+      <option value="{{item.name}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
+      {{item.name}}
+      <div>
 
-
-
-
-<form>
-  <div class="input-field col s12 browser-default">
-    <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      </div>
+      </option>
     </select>
-    <label>Materialize Select</label>
-  </div>
-</form>
+  </div><br><br>
+  <button ng-click="vm.submit(vm.item)" class="btn waves-effect waves-light" type="submit" name="action">Add</button>
+</div>
+
+<div>
+  <p>Selected:{{vm.order}}</p>
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- <h1>here i ma</h1> -->
-
-<!--
-<form ng-submit="vm.submitUpdate();"> -->
-<!--   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input ng-model="vm.formData.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div> -->
-  <!-- <div class="form-group">
-    <label for="exampleInputName">Name</label>
-    <input ng-model="vm.formData.name" type="text" class="form-control" id="exampleInputName" placeholder="Name">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input ng-model="vm.formData.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword2">Password confirmation</label>
-    <input ng-model="vm.formData.passwordConfirmation" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Update</button>
-</form>
-
- -->
