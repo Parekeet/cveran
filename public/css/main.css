@@ -10,6 +10,15 @@ body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #0C0C0C;
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],

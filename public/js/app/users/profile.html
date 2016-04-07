@@ -1,4 +1,7 @@
 <div id="order-form">
+
+<h1>PLACE YOUR ORDER HERE:</h1>
+
   <div style="display: block" class="input-field col s12 m6">
     <form id="category-selection" action="#">
       <div class="radio-container" ng-repeat="category in vm.categories track by $index">
@@ -12,20 +15,34 @@
   <div class="input-field col s12 m6">
     <select name="order" id="order" ng-model="vm.item" class="icons" style="display: block">
       <option value="" disabled selected>{{vm.category}}</option>
-      <option value="{{item.name}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
+      <option value="{{item.name}}  ${{item.cost}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
       {{item.name}}
-      <div class="right">
+      <div class="pull-right">
       ${{item.cost}}
       </div>
       </option>
     </select>
   </div><br><br>
   <button ng-click="vm.submit(vm.item)" class="btn waves-effect waves-light" type="submit" name="action">Add</button>
+  <div >
+    <p>Orders:</p>
+    <div ng-repeat="item in vm.orders">{{item}}</div>
+    <p>Subtotal:{{vm.total}}</p>
+  </div>
 </div>
 
-<div>
-  <p>Selected:{{vm.order}}</p>
-</div>
 
+<!--     <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
 
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      </div>
+    </div>
+
+ -->
 

@@ -21,18 +21,18 @@
   <div class="container-fluid">
 
   <header ng-controller="NavbarController as vm">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top white">
       <div class="container">
         <a ui-sref="home" class="navbar-brand"><img src="css/assets/mintt.png" width="40" height="40"></a>
-        <div class="pull-right">
-          <button ui-sref="home">Home</button>
-          <button ui-sref="menu">Menu</button>
-          <button ui-sref="about">About</button>
-          <button ui-sref="contact">Contact</button>
-          <button ng-show="vm.authService.isLoggedIn();" ui-sref="profile" type="button" class="btn btn-default navbar-btn"><i class="glyphicon glyphicon-cog"></i>Order</button>
-          <button ng-hide="vm.authService.isLoggedIn();" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-          <button ng-click="vm.logOut();" ng-show="vm.authService.isLoggedIn()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-        </div>
+        <ul class="pull-right">
+          <li class="black-text"><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="menu">Menu</a></li>
+          <li><a ui-sref="about">About</a></li>
+          <li><a ui-sref="contact">Contact</a></li>
+          <li><a ng-show="vm.authService.isLoggedIn();" ui-sref="profile"></i>Order</a></li>
+          <li><a ng-hide="vm.authService.isLoggedIn();" ui-sref="signin">Sign in</a></li>
+          <li><a ng-click="vm.logOut();" ng-show="vm.authService.isLoggedIn()" >Sign out</a></li>
+        </ul>
       </div>
     </nav>
   </header>
