@@ -11,35 +11,35 @@
   "name": "Golden Shrimp",
   "amount": "7 Pieces",
   "description": "Crispy, deep-fried stuffed shrimp spring roll, served with sweet and sour sauce.",
-  "cost": ""7.50""
+  "cost": "7.50"
 }
 {
   "category": "Salads",
   "name": "Glass Noodle Salad",
   "description": "Glass noodle with shrimp, and ground pork seasoned with refreshing lime juice, fresh chili.",
   "amount": "null",
-  "cost": ""8.50""
+  "cost": "8.50"
 }
 {
   "category": "Appetizers",
   "name": "Egg Rolls",
   "amount": "8 Pieces",
   "description": "Marinated mixed vegetables wrapped into a crispy spring roll, served with sweet and sour sauce.",
-  "cost": ""5.95""
+  "cost": "5.95"
 }
 {
   "category": "Appetizers",
   "name": "Fried Tofu",
   "amount": "2 Pieces",
   "description": "Deep-fried soft tofu, served with sweet and sour sauce and topped with ground peanuts.",
-  "cost": ""5.95""
+  "cost": "5.95"
 }
 {
   "category": "Appetizers",
   "name": "Fish Cakes",
   "amount": "8 Pieces",
   "description": "Deep-fried fish paste seasoned with Thai spices, served with sweet and sour sauce topped with ground peanuts.",
-  "cost": ""7.50""
+  "cost": "7.50"
 }
 {
   "category": "Appetizers",
