@@ -96,44 +96,44 @@
   "name": "Popcorn Chicken",
   "description": "Spicy, deep-fried seasoned chicken lightly coated with flour, spiced with salt and pepper, and topped with basil leaves.",
   "cost": "5.95"
-
+}
 {
   "category": "Salads",
   "name": "Seafood Salad",
   "description": "Lettuce tossed with assorted seafood, marinated in spicy lime juice with tomato, cucumber, and fresh chili.",
   "cost": "11.95"
-
+}
 {
   "category": "Salads",
   "name": "Squid Salad",
   "description": "Seasoned lettuce with squid marinated in spicy lime juice, cilantro, fresh mint leaves, onions.",
   "cost": "8.50"
-
+}
 {
   "category": "Salads",
   "name": "Grilled Beef or Pork Salad",
   "description": "Lime-seasoned salad tossed with grilled beef or pork, cucumber, tomato, cilantro, fresh mint leaves, green chili, onions.",
   "cost": "7.50"
-
+}
 {
   "category": "Salads",
   "name": "Crispy Chicken Salad",
   "description": "Crispy chicken in lime seasoned salad, tossed with cucumber, tomato, cilantro, fresh mint leaves, green chili, onions.",
   "cost": "7.50"
-
+}
 {
   "category": "Salads",
   "name": "Spicy Shrimp Salad",
   "description": "Fresh shrimp with lime-seasoned salad tossed with cucumber, tomato, cilantro, fresh mint leaves, green chili, onions.",
   "cost": "8.50"
-
+}
 {
   "category": "Salads",
   "name": "Larb Salad",
   "description": "Your choice of ground chicken or pork seasoned with onion, chili, and fresh mint leaves in lime juice mixed with toasted ground rice.",
   "cost": "7.50"
-
-{"
+}
+{
   "category": "Salads",
   "name": "Green Papaya Salad",
   "description": "Green papaya slices with dried shrimp, tomato, fresh chili, lime juice, and ground peanut in traditional Thai dressing.",
@@ -141,7 +141,7 @@
 }
 {
   "category": "Salads",
-  "name": ""name" Tok Beef of Pork Salad",
+  "name": "Tok Beef of Pork Salad",
   "description": "Thinly sliced beef or pork tossed with onion, chili, lime juice, fresh basil leaves, toasted ground rice.",
   "cost": "7.50"
 }
@@ -168,7 +168,7 @@
   "name": "Tom Yum Fish Filet Soup",
   "description": "Spicy and sour soup with fillet fish, fresh mushroom, tomato, lemongrass, galanga, ginger, garlic, basil, lime juice, and fresh chiii.",
   "cost": "10.95"
-}"
+}
 {
   "category": "Soups",
   "name": "Tom Ka Gai",
