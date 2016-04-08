@@ -39,7 +39,7 @@
         <tr>
           <td><div ng-repeat="item in vm.order track by $index">{{item.length}}</div></td></td>
           <td><div ng-repeat="item in vm.order track by $index">{{item.name}}</div></td>
-          <td><div ng-repeat="item in vm.order track by $index">{{item.cost}}<i class="fa fa-times" ng-click="vm.remove(vm.item)"></div></td></td>
+          <td><div ng-repeat="item in vm.order track by $index">{{item.cost}}<i class="fa fa-times" ng-click="vm.deleteItem(vm.item, $index)"></div></td></td>
         </tr>
       </table>
     </div>

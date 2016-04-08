@@ -10,12 +10,13 @@
   function ProfileController($http, $scope, $log, $state) {
     var vm = this;
 
-    vm.all    = [];
+    vm.all        = [];
     vm.category;
-    vm.submit = submit;
-    vm.remove = remove;
-    vm.order  = [];
-    vm.total   = 0;
+    vm.submit     = submit;
+    vm.remove     = remove;
+    vm.order      = [];
+    vm.total      = 0;
+    vm.deleteItem = deleteItem;
 
     selectFood();
 
@@ -31,6 +32,7 @@
         $state.go('pending');
       });
     };
+
 
     function selectFood() {
       $http
@@ -49,31 +51,30 @@
         });
     }
 
+
     function submit(itemId) {
       //push stuff to an array
       if (itemId) {
         var item = _.find(vm.all, {_id: itemId});
         vm.order.push(item);
         vm.total += item.cost;
-        // getTotal();
       }
-    }
+    };
 
     function remove() {
       console.log("I'm working");
-
     };
 
 
-    function getTotal(){
-        var total = 0;
-        for(var i = 0; i < order.item.length; i++){
-            var item = order.item[i];
-            total += (order.cost);
-            vm.total.push(order.cost);
-        }
-        return total;
-    }
+    function deleteItem (itemId, index) {
+      if (itemId) {
+        var item = _.find(vm.all, {_id: itemId});
+        console.log(item);
+        vm.order.splice(itemId, 1);
+      }
+    };
+
+
 
 
 
