@@ -3,11 +3,16 @@
 }
 */
 
+@font-face {
+  font-family: Gidole-Regular;
+  src: url(Gidole-Regular.ttf);
+}
+
 *,
 html,
 body {
   box-sizing: border-box;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Gidole-Regular;
 }
 
 nav ul a {
