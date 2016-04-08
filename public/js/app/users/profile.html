@@ -1,49 +1,78 @@
-<div id="order-form">
-
-<h1>PLACE YOUR ORDER HERE:</h1>
-
-  <div style="display: block" class="input-field col s12 m6">
-    <form id="category-selection" action="#">
-      <div class="radio-container" ng-repeat="category in vm.categories track by $index">
-        <p>
-          <input style="display: block" name="category" id="{{category}}-radio" type="radio" ng-model="vm.category" value="{{category}}">
-          <label for="{{category}}-radio">{{category}}</label>
-        </p>
-      </div>
-    </form>
+<div id="order-wrapper">
+  <div id="order-form">
+  <h4>Order Here:</h4>
+  <br><br>
+    <div style="display: block" class="input-field col s12 m6">
+      <form id="category-selection" action="#">
+        <div class="radio-container" ng-repeat="category in vm.categories track by $index">
+          <p>
+            <input style="display: block" name="category" id="{{category}}-radio" type="radio" ng-model="vm.category" value="{{category}}">
+            <label for="{{category}}-radio">{{category}}</label>
+          </p>
+        </div>
+      </form>
+    </div>
+    <br><br>
+    <div class="input-field col s12 m6">
+      <select name="order" id="order" ng-model="vm.item" class="icons" style="display: inline-block;width: 400px;">
+        <option value="" disabled selected>{{vm.category}}</option>
+        <option value="{{item._id}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
+        {{item.name}}
+        <div>
+        ${{item.cost}}
+        </div>
+        </option>
+      </select>
+    </div><br><br>
+    <button ng-click="vm.submit(vm.item)" class="btn waves-effect waves-light" type="submit" name="action">Add</button>
   </div>
-  <div class="input-field col s12 m6">
-    <select name="order" id="order" ng-model="vm.item" class="icons" style="display: block">
-      <option value="" disabled selected>{{vm.category}}</option>
-      <option value="{{item._id}}" data-icon="images/sample-1.jpg" class="circle" ng-repeat="item in vm.all | filter: vm.category">
-      {{item.name}}
-      <div class="pull-right">
-      ${{item.cost}}
-      </div>
-      </option>
-    </select>
-  </div><br><br>
-  <button ng-click="vm.submit(vm.item)" class="btn waves-effect waves-light" type="submit" name="action">Add</button>
-  <div >
-    <p>Order:</p>
-    <div ng-repeat="item in vm.order">{{item.name}}<i class="fa fa-times" ng-click="vm.remove(vm.item)"></i></div>
-    <p>Subtotal:{{vm.total | currency}}</p>
+
+  <div id="order-form2">
+    <h4>Your Current Order:</h4>
+    <div>
+      <table id="order-summary">
+        <tr>
+          <th id="order-attr">Qty</th>
+          <th id="order-attr">Item</th>
+          <th id="order-attr">Cost</th>
+        </tr>
+        <tr>
+          <td><div ng-repeat="item in vm.order track by $index">{{item.length}}</div></td></td>
+          <td><div ng-repeat="item in vm.order track by $index">{{item.name}}</div></td>
+          <td><div ng-repeat="item in vm.order track by $index">{{item.cost}}<i class="fa fa-times" ng-click="vm.remove(vm.item)"></div></td></td>
+        </tr>
+      </table>
+    </div>
+    <hr>
+    <div id="total-table">
+      <table>
+        <tr>
+          <td style="padding: 0px;"><b>Subtotal:</b></td>
+          <td style="padding: 0px;">{{vm.total | currency}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 0px;"><b>Tax:</b></td>
+          <td style="padding: 0px;">{{vm.total * 0.0825| currency}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 0px;"><b>Total:</b></td>
+          <td style="padding: 0px;">{{vm.total * 1.0825| currency}}</td>
+        </tr>
+        <tr>
+          <td><button ng-click="vm.placeOrder()" ng-disabled="!vm.order.length" class="btn waves-effect waves-light">Place Order</button></td>
+        </tr>
+      </table>
+    </div>
   </div>
-  <button ng-click="vm.placeOrder()" ng-disabled="!vm.order.length" class="btn waves-effect waves-light">Place Order</button>
 </div>
 
 
-<!--     <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
 
-    <div id="modal1" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-      </div>
+
+
+<!--     <div >
+      <p>Order:</p>
+      <div ng-repeat="item in vm.order">{{item.name}}<i class="fa fa-times" ng-click="vm.remove(vm.item)"></i></div>
+      <p>Subtotal:{{vm.total | currency}}</p>
     </div>
-
- -->
-
+    <button ng-click="vm.placeOrder()" ng-disabled="!vm.order.length" class="btn waves-effect waves-light">Place Order</button> -->

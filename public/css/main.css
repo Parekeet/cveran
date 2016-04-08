@@ -181,3 +181,91 @@ form {
   height: 54px;
 }
 
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+/*ORDER FORMS*/
+#order-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative
+}
+
+#order-form {
+  width: 450px;
+  min-height: 470px;
+  position: fixed;
+}
+
+#order-form2 {
+  width: 450px;
+  min-height: 486px;
+  float: right;
+  position: relative;
+}
+
+#order-form, #order-form2 {
+/*  border: 1px solid black;*/
+  padding: 10px 15px;
+  margin: 10px;
+}
+
+#total-table {
+/*  position: absolute;
+*/  bottom: 0;
+  right: 0;
+}
+
+#order-summary {
+  min-height: 237px;
+}
+
+#order-attr {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
