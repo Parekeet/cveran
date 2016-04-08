@@ -1,11 +1,11 @@
 <div id="menu">
   <section>
   <div>
-    <h1 style="text-align: center">Menu</h1>
+    <h1 style="text-align: center;">Menu</h1>
   </div>
     <div id="appetizers" class="menu-items">
       <ul>
-          <h4>Appetizers</h4>
+          <h4 style="text-decoration: underline;">Appetizers</h4>
             <li ng-repeat="items in vm.all | filter:'Appetizers' ">
               {{items.name}}<br>
               {{items.description}}<br>
@@ -16,7 +16,7 @@
     </div>
     <div id="salads" class="menu-items">
       <ul>
-        <h4>Salads</h4>
+        <h4 style="text-decoration: underline;">Salads</h4>
           <li ng-repeat="items in vm.all | filter:'Salads' ">
             {{items.name}}<br>
             {{items.description}}<br>
@@ -27,7 +27,7 @@
     </div>
     <div id="soups" class="menu-items">
       <ul>
-        <h4>Soups</h4>
+        <h4 style="text-decoration: underline;">Soups</h4>
           <li ng-repeat="items in vm.all | filter:'Soups' ">
             {{items.name}}<br>
             {{items.description}}<br>
@@ -38,7 +38,7 @@
     </div>
     <div id="noodles" class="menu-items">
       <ul>
-        <h4>Noodles</h4>
+        <h4 style="text-decoration: underline;">Noodles</h4>
           <li ng-repeat="items in vm.all | filter:'Noodles' ">
             {{items.name}}<br>
             {{items.description}}<br>

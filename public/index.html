@@ -37,7 +37,7 @@
         <a ui-sref="home" class="navbar-brand" style="padding-left: 20px; padding-top: 7px"><img src="css/assets/mintt.png" width="40" height="40"></a>
         <ul class="pull-right valign-wrapper">
           <li><a ui-sref="home">Home</a></li>
-          <li><a href="#menu" class="dropdown-button" data-activates="dropdown1">Menu</a></li>
+          <li><a target="#menu" class="dropdown-button" data-activates="dropdown1">Menu</a></li>
           <li><a ui-sref="about">About</a></li>
           <li><a ui-sref="contact">Contact</a></li>
           <li><a ng-show="vm.authService.isLoggedIn();" ui-sref="profile"></i>Order</a></li>
@@ -53,12 +53,12 @@
     </main>
   </div> <!-- div.container-fluid -->
 
-  <footer>
+<!--   <footer>
     <hr>
     <span>Made with <i class="glyphicon glyphicon-star"></i> in DTLA.</span>
     <br>
     <span>© 2016, WDI</span>
-  </footer>
+  </footer> -->
 
   <script src="/js/app/app.module.js"></script>
   <script src="/js/app/config/app.debug.js"></script>

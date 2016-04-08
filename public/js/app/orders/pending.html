@@ -1,11 +1,25 @@
-<h1>Your Orders</h1>
-
-<div ng-repeat="order in vm.orders | orderBy:'date':true track by $index">
-  <p>{{order.date}}</p>
-  <p>{{order.total}}</p>
-  <ul>
-    <li ng-repeat="item in order.items">
-      {{item.name}}
-    </li>
-  </ul>
+<h1>Your Orders: </h1>
+<div ng-repeat="order in vm.orders | orderBy:'date':true track by $index" style="text-align: center;" id="pending-order-wrapper" class="z-depth-2">
+  <table>
+    <hr>
+    <tr>
+      <td><b>Date of order:</b></td>
+      <td>{{order.date | date: 'EEEE, MMMM d, y , h:mm a'}}</td>
+    </tr>
+    <tr>
+      <td><b>Order total:</b></td>
+      <td>{{order.total | currency}}</td>
+    </tr>
+    <tr>
+      <td><b>Items:</b></td>
+      <td>
+        <ul>
+          <li ng-repeat="item in order.items">
+            {{item.name}}
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <hr>
 </div>
