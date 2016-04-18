@@ -1,4 +1,5 @@
 var Order = require("../models/order");
+var nodemailer = require('nodemailer');
 
 module.exports = {
   index: index,
@@ -31,7 +32,39 @@ console.log('req.body', req.body)
     .then(function(order) {
       // send email to user
       // communicate order to e24
+
+////////////////////////////////////////////////
+        var sendMailTo = function(req, res, next){
+          var transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            auth: {
+              user: 'mintthaiservice@gmail.com',
+              pass: 'scoobymint'
+            }
+          });
+
+          var mailOptions = {
+            from: 'Pare <parekeet@gmail.com>',
+            to:   'mintthaiservice@gmail.com',
+            subject: 'Order Submission',
+            text: 'You have an order with the following details... Order: ' + order,
+            html: '<p>You have an order with the following details...</p>' + order
+          };
+
+          transporter.sendMail(mailOptions, function(error, info){
+            if(error){
+              console.log(error);
+            } else {
+              console.log("Message Sent: " +info.response);
+            }
+          })
+        };
+
+
+////////////////////////////////////////////////
+
       res.json(order);
+      sendMailTo();
     })
     .catch(function(err) {
       if (err.message.match(/E11000/)) {
