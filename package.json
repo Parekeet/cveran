@@ -17,6 +17,12 @@
     "mongoose": "^4.1.1",
     "mongoose-bcrypt": "^1.2.3",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "mailcomposer": "3.7.0",
+    "nodemailer-direct-transport": "3.0.7",
+    "nodemailer-shared": "1.0.4",
+    "nodemailer-smtp-pool": "2.5.2",
+    "nodemailer-smtp-transport": "2.4.2",
+    "socks": "1.1.9"
   }
 }
