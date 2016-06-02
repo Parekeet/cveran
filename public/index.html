@@ -41,8 +41,6 @@
           <li><a ui-sref="about">About</a></li>
           <li><a ui-sref="contact">Contact</a></li>
           <li><a ng-show="vm.authService.isLoggedIn();" ui-sref="profile"></i>Order</a></li>
-          <li><a ng-hide="vm.authService.isLoggedIn();" ui-sref="signin">Sign in</a></li>
-          <li><a ng-click="vm.logOut();" ng-show="vm.authService.isLoggedIn()" >Sign out</a></li>
         </ul>
       </nav>
     </div>
